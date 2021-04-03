@@ -6,6 +6,10 @@ import { StyleSheet } from "react-native";
 
 import AppLoading from "expo-app-loading";
 
+import { enableScreens } from "react-native-screens";
+
+enableScreens();
+
 const fetchFonts = () => {
   return Font.loadAsync({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
