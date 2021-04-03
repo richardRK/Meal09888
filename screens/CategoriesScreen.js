@@ -25,21 +25,12 @@ const CategoriesScreen = (props) => {
     );
   };
 
-  // const backButtonClick = () => {
-  //   if (props.navigation && this.props.navigation.goBack) {
-  //     props.navigation.goBack(null);
-  //     return true;
-  //   }
-  //   return false;
-  // };
-
   return (
     <FlatList
       keyExtractor={(item, index) => item.id}
       data={CATEGORIES}
       renderItem={renderGridItem}
       numColumns={2}
-      // backHandler={backButtonClick}
     />
   );
 };
