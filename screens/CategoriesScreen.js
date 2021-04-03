@@ -17,7 +17,13 @@ const CategoriesScreen = (props) => {
       <TouchableOpacity
         style={styles.gridItem}
         onPress={() => {
-          props.navigation.navigate({ routeName: "CategoryMeals" });
+          props.navigation.navigate({
+            routeName: "CategoryMeals",
+
+            params: {
+              categoryId: itemData.item.id,
+            },
+          });
         }}
       >
         <View>
@@ -26,12 +32,22 @@ const CategoriesScreen = (props) => {
       </TouchableOpacity>
     );
   };
+
+  const backButtonClick = () => {
+    if (props.navigation && this.props.navigation.goBack) {
+      props.navigation.goBack(null);
+      return true;
+    }
+    return false;
+  };
+
   return (
     <FlatList
       keyExtractor={(item, index) => item.id}
       data={CATEGORIES}
       renderItem={renderGridItem}
       numColumns={2}
+      backHandler={backButtonClick}
     />
   );
 };
