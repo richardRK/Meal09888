@@ -25,13 +25,13 @@ const CategoriesScreen = (props) => {
     );
   };
 
-  const backButtonClick = () => {
-    if (props.navigation && this.props.navigation.goBack) {
-      props.navigation.goBack(null);
-      return true;
-    }
-    return false;
-  };
+  // const backButtonClick = () => {
+  //   if (props.navigation && this.props.navigation.goBack) {
+  //     props.navigation.goBack(null);
+  //     return true;
+  //   }
+  //   return false;
+  // };
 
   return (
     <FlatList
@@ -39,7 +39,7 @@ const CategoriesScreen = (props) => {
       data={CATEGORIES}
       renderItem={renderGridItem}
       numColumns={2}
-      backHandler={backButtonClick}
+      // backHandler={backButtonClick}
     />
   );
 };

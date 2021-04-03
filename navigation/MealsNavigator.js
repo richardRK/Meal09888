@@ -129,7 +129,8 @@ const MainNavigator = createDrawerNavigator(
         drawerLabel: "Meals",
       },
     },
-    Filters: FiltersNavigator,
+    // Filters: FiltersNavigator,
+    Filters1:FiltersNavigator
   },
   {
     contentOptions: {
